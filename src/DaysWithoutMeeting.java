@@ -2,20 +2,24 @@
 public class DaysWithoutMeeting {
 
     public static void main(String[] args) {
-        int[][] arr = {{2,4},{1,6}};
-        int days = 6;
+        int[][] arr = {{1,7},{1,3},{9,10}};
+        int days = 10;
 
         int[] day = new int[days];
 
         for (int[] array : arr) {
-            for (int j=array[0]-1;j<array[1];++j) {
-                day[j] = 1;
+            if (array[0]-1 < days) {
+                day[array[0] - 1]++;
+            }
+            if (array[1] < days) {
+                day[array[1]]--;
             }
         }
-
         int count = 0;
-        for (int j : day) {
-            if (j == 0) {
+        int meetings = 0;
+        for (int i : day) {
+            meetings += i;
+            if (meetings == 0) {
                 count++;
             }
         }
