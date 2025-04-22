@@ -40,5 +40,22 @@ public class Main {
             curr = curr.next;
         }
         while (curr != circularLinkedList.head);
+
+        DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
+
+        doublyLinkedList.push(5);
+        doublyLinkedList.push(4);
+        doublyLinkedList.insertElement(3, 2);
+        doublyLinkedList.push(7);
+
+        doublyLinkedList.removeElementByPosition(3);
+        doublyLinkedList.removeElementByValue(5);
+
+        System.out.println("Doubly Linked List: ");
+        curr = doublyLinkedList.head;
+        while (curr != null) {
+            System.out.println(curr.value);
+            curr = curr.next;
+        }
     }
 }

@@ -7,8 +7,7 @@ public class CircularLinkedList {
     public int size ;
 
     public void createList(int nodeValue) {
-        Node node = new Node();
-        node.value = nodeValue;
+        Node node = new Node(nodeValue);
         node.next = node;
         head = node;
         tail = node;
@@ -16,8 +15,7 @@ public class CircularLinkedList {
     }
 
     public void insertElement(int nodeValue, int position) {
-        Node node = new Node();
-        node.value = nodeValue;
+        Node node = new Node(nodeValue);
         if (head == null) {
             createList(nodeValue);
             return;

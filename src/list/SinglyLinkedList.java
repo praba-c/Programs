@@ -1,21 +1,19 @@
 package list;
 
 public class SinglyLinkedList {
-    public Node head;
+    public Node head = null;
     public Node tail;
     public int size;
 
     public void createList(int val) {
-        Node node = new Node();
-        node.value = val;
+        Node node = new Node(val);
         head = node;
         tail = node;
         size = 1;
     }
 
     public void insertElement(int nodeValue, int position) {
-        Node node = new Node();
-        node.value = nodeValue;
+        Node node = new Node(nodeValue);
         if (head == null) {
             createList(nodeValue);
         } else if (position == 0) {
