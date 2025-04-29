@@ -1,6 +1,6 @@
-package list;
+package linkedList;
 
-public class CircularLinkedList {
+public class CircularSinglyLinkedList {
 
     public Node head;
     public Node tail;

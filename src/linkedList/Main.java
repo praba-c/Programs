@@ -1,4 +1,4 @@
-package list;
+package linkedList;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,24 +22,24 @@ public class Main {
         }
 
 
-        CircularLinkedList circularLinkedList = new CircularLinkedList();
+        CircularSinglyLinkedList circularSinglyLinkedList = new CircularSinglyLinkedList();
 
-        circularLinkedList.insertElement(6, 0);
-        circularLinkedList.insertElement(3, 1);
-        circularLinkedList.insertElement(5, 2);
-        circularLinkedList.insertElement(2, 3);
-        circularLinkedList.insertElement(8, 4);
-        
-        circularLinkedList.removeElementByValue(6);
-        circularLinkedList.removeElementByPosition(2);
+        circularSinglyLinkedList.insertElement(6, 0);
+        circularSinglyLinkedList.insertElement(3, 1);
+        circularSinglyLinkedList.insertElement(5, 2);
+        circularSinglyLinkedList.insertElement(2, 3);
+        circularSinglyLinkedList.insertElement(8, 4);
+
+        circularSinglyLinkedList.removeElementByValue(6);
+        circularSinglyLinkedList.removeElementByPosition(2);
 
         System.out.println("Circular Singly Linked List: ");
-        curr = circularLinkedList.head;
+        curr = circularSinglyLinkedList.head;
         do {
             System.out.println(curr.value);
             curr = curr.next;
         }
-        while (curr != circularLinkedList.head);
+        while (curr != circularSinglyLinkedList.head);
 
         DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
 
@@ -57,5 +57,23 @@ public class Main {
             System.out.println(curr.value);
             curr = curr.next;
         }
+
+        CircularDoublyLinkedList circularDoublyLinkedList = new CircularDoublyLinkedList();
+
+        circularDoublyLinkedList.push(2);
+        circularDoublyLinkedList.push(3);
+        circularDoublyLinkedList.push(1);
+        circularDoublyLinkedList.insertElement(2, 3);
+        circularDoublyLinkedList.insertElement(4, 4);
+
+        circularDoublyLinkedList.removeElement(2);
+
+        System.out.println("Circular Doubly Linked List: ");
+        curr = circularDoublyLinkedList.head;
+        do {
+            System.out.println(curr.value);
+            curr = curr.next;
+        }
+        while (curr != circularDoublyLinkedList.head);
     }
 }

@@ -1,4 +1,4 @@
-package list;
+package linkedList;
 
 public class SinglyLinkedList {
     public Node head = null;
@@ -90,5 +90,19 @@ public class SinglyLinkedList {
             index++;
         }
         System.out.println("Element found at index: " + index);
+    }
+
+    public void reverseLinkedList() {
+        Node prev = null;
+        Node curr = head;
+        Node next = null;
+
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
     }
 }
