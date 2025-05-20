@@ -1,6 +1,6 @@
 package algorithms;
 
-// TO CHECK IF THE TARGET PRESENT IN ANY OF THE CONTIGuOUS SUB-ARRAY
+// TO CHECK IF THE TARGET PRESENT IN ANY OF THE CONTIGUOUS SUB-ARRAY
 public class SlidingWindow_SubArray {
 
     public static void main(String[] args) {

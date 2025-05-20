@@ -1,5 +1,6 @@
 package algorithms;
 
+// TO FIND AN ELEMENT THAT APPEARS MORE THAN N/2 TIMES
 public class Boyer_Moore_Voting {
 
     public static void main(String[] args) {

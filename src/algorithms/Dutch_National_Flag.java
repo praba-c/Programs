@@ -2,6 +2,7 @@ package algorithms;
 
 import java.util.Arrays;
 
+// TO SORT AN ARRAY WITH ONLY THREE DISTINCT ELEMENTS IN O(N)
 public class Dutch_National_Flag {
 
     public static void main(String[] args) {
