@@ -1,7 +1,7 @@
 package algorithms;
 
 // TO FIND THE MAXIMUM SUM OF THE SUB-ARRAY
-public class Kadane_Algorithm {
+public class Kadane {
 
     public static void main(String[] args) {
         int[] array = {-1, -4, 6, 8};

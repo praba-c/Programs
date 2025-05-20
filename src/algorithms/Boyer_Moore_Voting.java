@@ -1,6 +1,6 @@
 package algorithms;
 
-public class Boyer_Moore_Voting_Algorithm {
+public class Boyer_Moore_Voting {
 
     public static void main(String[] args) {
         int[] arr = {2,2,1,1,1,2,2};
