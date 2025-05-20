@@ -1,4 +1,4 @@
-package stack;
+package ds.stack;
 
 public class StackArray {
     public int[] arr;

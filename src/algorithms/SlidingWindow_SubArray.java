@@ -1,7 +1,7 @@
 package algorithms;
 
 // TO CHECK IF THE TARGET PRESENT IN ANY OF THE CONTIGuOUS SUB-ARRAY
-public class SlidingWindow {
+public class SlidingWindow_SubArray {
 
     public static void main(String[] args) {
         int[] arr = {1,4,20,3,10,5};

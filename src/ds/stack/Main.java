@@ -1,4 +1,4 @@
-package stack;
+package ds.stack;
 
 public class Main {
     public static void main(String[] args) {
