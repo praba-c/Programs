@@ -1,9 +1,9 @@
 package ds.stack;
 
-public class StackList {
+public class StackUsingList {
     public List list;
 
-    public StackList() {
+    public StackUsingList() {
         list = new List();
     }
 
@@ -19,5 +19,9 @@ public class StackList {
 
     public int peek() {
         return list.head.value;
+    }
+
+    public boolean isEmpty() {
+        return list.size == 0;
     }
 }

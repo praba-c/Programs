@@ -1,10 +1,10 @@
 package ds.stack;
 
-public class StackArray {
+public class StackUsingArray {
     public int[] arr;
     public int topOfStack;
 
-    public StackArray(int size) {
+    public StackUsingArray(int size) {
         this.arr = new int[size];
         topOfStack = -1;
     }

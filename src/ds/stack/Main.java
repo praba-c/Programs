@@ -2,7 +2,7 @@ package ds.stack;
 
 public class Main {
     public static void main(String[] args) {
-        StackArray stack = new StackArray(5);
+        StackUsingArray stack = new StackUsingArray(5);
         stack.push(1);
         stack.push(2);
         stack.push(3);
@@ -15,11 +15,11 @@ public class Main {
         System.out.println(stack.peek());
 
         System.out.println("Using List:");
-        StackList stackList = new StackList();
-        stackList.push(2);
-        stackList.push(3);
-        stackList.push(4);
-        System.out.println(stackList.pop());
-        System.out.println(stackList.peek());
+        StackUsingList stackUsingList = new StackUsingList();
+        stackUsingList.push(2);
+        stackUsingList.push(3);
+        stackUsingList.push(4);
+        System.out.println(stackUsingList.pop());
+        System.out.println(stackUsingList.peek());
     }
 }

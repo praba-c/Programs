@@ -27,7 +27,7 @@ public class Problems {
         breakCycle(circularSinglyLinkedList.head);              // break cycle
         findNthNodeFromTheLast(singlyLinkedList.head, 5);
 
-        if(isPalindrome(singlyLinkedList.head)) {
+        if (isPalindrome(singlyLinkedList.head)) {
             System.out.println("Palindrome");
         } else {
             System.out.println("Not a Palindrome");
@@ -44,7 +44,7 @@ public class Problems {
             slow = slow.next;
             fast = fast.next.next;
         }
-        System.out.println("Middle of the list is " + slow.value);
+        System.out.println("Middle Node of the List is: " + slow.value);
         return slow;
     }
 
