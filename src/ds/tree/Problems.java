@@ -11,7 +11,7 @@ public class Problems {
         tree.insert(3);
         tree.insert(6);
 
-        //System.out.println(search(tree.root, 7));
+        System.out.println(search(tree.root, 7));
 
         System.out.println(isBalanced(tree.root));
     }
@@ -97,12 +97,14 @@ public class Problems {
     public static boolean isBalanced(Node root) {
         return checkHeight(root) != -1;
     }
+
     public static int checkHeight(Node root) {
         if (root == null) {
             return 0;
         }
         int left = checkHeight(root.left);
         int right = checkHeight(root.right);
+
         if (Math.abs(right - left) > 1) {
             return -1;
         }
