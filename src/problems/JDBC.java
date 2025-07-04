@@ -15,11 +15,11 @@ public class JDBC {
      */
     public static void main(String[] args) throws Exception {
         // load
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        String url = "jdbc:mysql://localhost:3306/my_database";
-        Connection connection = DriverManager.getConnection(url, "root", "root");
-        Statement statement = connection.createStatement();
-        statement.execute("delete from employees where age = 13");
+//        Class.forName("com.mysql.cj.jdbc.Driver");
+//        String url = "jdbc:mysql://localhost:3306/my_database";
+//        Connection connection = DriverManager.getConnection(url, "root", "root");
+//        Statement statement = connection.createStatement();
+//        ResultSet resultSet =  statement.executeQuery("select * from employees");
 //        resultSet.next();
 //        String name = resultSet.getString("Name");
 //        System.out.println(name);
@@ -31,16 +31,28 @@ public class JDBC {
 //            System.out.println(resultSet.getString(4));
 //        }
 
-        int Id = 3;
-        String Name = "Padma";
-        int Age = 23;
-        String DOB = "2002-02-01";
+//        int Id = 3;
+//        String Name = "Padma";
+//        int Age = 23;
+//        String DOB = "2002-02-01";
 //        PreparedStatement preparedStatement = connection.prepareStatement("insert into employees values (?,?,?,?)");
 //        preparedStatement.setInt(1, Id);
 //        preparedStatement.setString(2, Name);
 //        preparedStatement.setInt(3, Age);
 //        preparedStatement.setString(4, DOB);
 //        preparedStatement.execute();
+        //connection.close();
+
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/my_database", "root", "root");
+        Statement statement = connection.createStatement();
+        ResultSet resultSet = statement.executeQuery("select * from employees");
+        //resultSet.next();
+        while (resultSet.next()) {
+            System.out.print(resultSet.getString(1) + "_");
+            System.out.print(resultSet.getString(2) + "_");
+            System.out.print(resultSet.getString(3) + "_");
+            System.out.println(resultSet.getString(4));
+        }
         connection.close();
     }
 }
